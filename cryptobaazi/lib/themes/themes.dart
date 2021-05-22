@@ -20,7 +20,7 @@ class MyTheme {
 
   static ThemeData darkTheme(BuildContext context) => ThemeData(
         brightness: Brightness.dark,
-        cardColor: Colors.blueGrey,
+        cardColor: grayishblack,
         canvasColor: darkCreamColor,
         buttonColor: lightBluishColor,
         accentColor: Colors.white,
@@ -42,4 +42,5 @@ class MyTheme {
   static Color darkCreamColor = Vx.gray900;
   static Color lightBluishColor = Vx.purple400;
   static Color darkBluishColor = Color(0xff403b58);
+  static Color grayishblack = Vx.gray800;
 }

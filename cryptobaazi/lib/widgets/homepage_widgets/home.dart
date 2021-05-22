@@ -12,13 +12,13 @@ class _HomeWidgetState extends State<HomeWidget> {
   @override
   Widget build(BuildContext context) {
     bool isTap = false;
-    return ElevatedButton(
-      child: Icon(Icons.home_rounded),
-      style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(MyTheme.darkBluishColor)),
-      onPressed: () {
-        print("Hello");
+    return InkWell(
+      onTap: () {
+        isTap.toggle();
+        setState(() {});
       },
+      child: Icon(Icons.home_rounded,
+          color: isTap ? Colors.red : context.accentColor),
     ).px16();
   }
 }
