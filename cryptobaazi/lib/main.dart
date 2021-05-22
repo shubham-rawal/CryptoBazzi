@@ -1,7 +1,10 @@
 import 'package:cryptobaazi/pages/landingpage.dart';
+import 'package:cryptobaazi/pages/settings.dart';
 import 'package:cryptobaazi/themes/themes.dart';
 import 'package:cryptobaazi/utils/routes.dart';
 import 'package:flutter/material.dart';
+
+import 'utils/routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,6 +21,7 @@ class MyApp extends StatelessWidget {
       initialRoute: MyRoutes.landingRoute,
       routes: {
         MyRoutes.landingRoute: (context) => LandingPage(),
+        MyRoutes.settingsRoute: (context) => SettingsPage(),
       },
     );
   }
