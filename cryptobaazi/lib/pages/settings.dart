@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -13,23 +14,33 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(
-          children: [
-            Card(
-              child: ListTile(
-                title: "Theme Mode".text.make(),
-                onTap: () {
-                  ThemeMode.light;
-                  setState(() {});
-                },
-              ),
-            ),
-            Card(
-              child: ListTile(
-                title: "Account Settings".text.make(),
-              ),
-            ),
-          ],
+        body: Container(
+          padding: EdgeInsets.all(12),
+          child: Column(
+            children: [
+              Card(
+                elevation: 5.0,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16)),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ListTile(
+                      title: "Theme Mode".text.size(13).make(),
+                      trailing: Icon(Icons.more_horiz_outlined),
+                      onTap: () {
+                        setState(() {});
+                      },
+                    ),
+                    ListTile(
+                      title: "Account Settings".text.size(13).make(),
+                      trailing: Icon(Icons.more_horiz_outlined),
+                    ),
+                  ], // Add tiles Within cards
+                ),
+              ), //For Addition of Multiple Cards
+            ],
+          ),
         ),
         bottomNavigationBar: MainBar(),
       ),
